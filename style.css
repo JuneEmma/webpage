@@ -151,16 +151,60 @@ p {
 }
 
 .our-products {
-  background: url("img/kugane.png"), radial-gradient(#444, #fff);
-  background-blend-mode: multiply;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center center;
+  background: rgb(63, 70, 70);
+  background: linear-gradient(
+    90deg,
+    rgba(63, 70, 70, 1) 0%,
+    rgba(148, 138, 156, 1) 75%,
+    rgba(163, 170, 166, 1) 100%
+  );
   color: #fff;
 }
 
 .product {
+  background: radial-gradient(
+    var(--colorInner, limegreen),
+    var(--colorOuter, purple)
+  );
   padding: 48px;
   border-radius: 16px;
-  margin-bottom: 48px;
+  margin-bottom: 80px;
+  text-align: center;
 }
+
+.product__image {
+}
+
+.product__title {
+  font-size: clamp(3rem, calc(5vvw + 1rem), 6rem);
+  line-height: 1;
+  color: #fff;
+  text-shadow: 0 0 3.2px rgba(#000, 0.2);
+}
+
+.frame-one {
+  --colorInner: red;
+  --colorOuter: black;
+}
+
+.frame-two {
+  --colorInner: #94714f;
+  --colorOuter: #ccbcac;
+  --colorAccent: #45b6f3;
+}
+
+.frame-three {
+  --colorInner: #290d44;
+  --colorOuter: #fec5e5;
+  --colorAccent: rgb(227, 11, 93);
+}
+
+.hero {
+  --colorAccent: #faa700;
+}
+
+@media (min-width: 45em) {
+  .product {
+    text-align: left;
+    margin-bottom: 9em;
+  }
