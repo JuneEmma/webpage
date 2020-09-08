@@ -1,3 +1,160 @@
 * {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
   font-family: "Noto Sans JP", sans-serif;
+  margin: 0;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+section {
+  padding: 115px 0;
+  border: 1px solid #000000;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.container {
+  width: 85%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.spacing > * + * {
+  margin-top: var(--spacer, 2rem);
+}
+
+.split {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+}
+
+.split > * {
+  flex-basis: 30%;
+  min-width: 240px;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 8px 20px;
+  background: var(--colorAccent, #000000);
+  color: var(--colorText, #fff);
+  border-radius: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 18px;
+  transition: transform 200ms ease-in-out, opacity 200ms linear;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
+
+.btn:focus {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
+
+.header-title {
+  font-size: 4rem;
+  font-size: clamp(3rem, (5vw + 1rem), 5rem);
+  line-height: 1;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(2.3rem, (5vw + 1rem), 4.1rem);
+  line-height: 1;
+  margin-bottom: 5rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 240px 0;
+  background: url("img/ffxiv-hero.jpg"), radial-gradient(#444, #fff);
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #fff;
+}
+
+.featured {
+  background: url("img/featured-background.jpg"), radial-gradient(#444, #fff);
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.featured__image {
+  border-radius: 75%;
+}
+
+.featured__item {
+  display: block;
+  position: relative;
+  transform: scale(0.8);
+  transition: transform 300ms ease-in-out;
+  text-decoration: none;
+  text-align: center;
+  color: #fbf7f5;
+  line-height: 1.5;
+}
+
+.featured__item:hover {
+  -webkit-transform: scale(1);
+}
+
+.featured__item:hover .featured__details {
+  opacity: 1;
+}
+
+.featured__item:focus {
+  transform: scale(1);
+}
+
+.featured__item:focus .featured__details {
+  opacity: 1;
+}
+
+.featured__details {
+  opacity: 0;
+}
+
+/*.featured__item::after {
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: 0;
+  padding: 100% 100% 0 0;
+  border-radius: 50%;
+  background: #fff6eb;
+  opacity: 50%;
+  z-index: -1;
+}*/
+
+.name {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
 }
