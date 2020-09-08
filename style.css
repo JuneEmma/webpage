@@ -42,7 +42,7 @@ p {
 .split {
   display: flex;
   flex-wrap: wrap;
-  gap: 32px;
+  gap: 8px;
   justify-content: center;
 }
 
@@ -127,6 +127,7 @@ p {
 
 .featured__item:hover .featured__details {
   opacity: 1;
+  text-shadow: 0 0 32px rgba(#fff, 1);
 }
 
 .featured__item:focus {
@@ -135,26 +136,31 @@ p {
 
 .featured__item:focus .featured__details {
   opacity: 1;
+  text-shadow: 0 0 32px rgba(#fff, 1);
 }
 
 .featured__details {
   opacity: 0;
+  transition: opacity 300ms linear;
 }
-
-/*.featured__item::after {
-  content: "";
-  position: absolute;
-  top: 25%;
-  left: 0;
-  padding: 100% 100% 0 0;
-  border-radius: 50%;
-  background: #fff6eb;
-  opacity: 50%;
-  z-index: -1;
-}*/
 
 .name {
   display: block;
   font-size: 2rem;
   font-weight: 700;
+}
+
+.our-products {
+  background: url("img/kugane.png"), radial-gradient(#444, #fff);
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #fff;
+}
+
+.product {
+  padding: 48px;
+  border-radius: 16px;
+  margin-bottom: 48px;
 }
